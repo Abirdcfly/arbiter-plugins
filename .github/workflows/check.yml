@@ -25,3 +25,6 @@ jobs:
         run: make verify
       - name: make for test
         run: make
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        if: failure()
