@@ -6,7 +6,7 @@ set -o pipefail
 
 function go::build_binary() {
 	local -r targets=($@)
-
+  go env
 	IFS="," read -ra platforms <<<"${BUILD_PLATFORMS:-}"
 	if [[ ${#platforms[@]} -eq 0 ]]; then
 		read -ra platforms <<<$(go::host_platform)

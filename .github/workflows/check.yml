@@ -21,8 +21,8 @@ jobs:
         with:
           go-version: ${{ env.GO_VERSION }}
           check-latest: true
-      - name: verify
-        run: make verify
+#      - name: verify
+#        run: make verify
       - name: make for test
         run: make
       - name: Setup tmate session
